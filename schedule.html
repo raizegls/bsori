@@ -15,6 +15,52 @@
     		#header > .container {
 			padding-bottom: 2em !important; /* 기본 7em → 2em 정도로 */
             }
+
+             .schedule-table {
+                width: 100%;
+                border-collapse: collapse;
+                table-layout: fixed;
+                font-size: 16px;
+            }
+            .schedule-table th,
+            .schedule-table td {
+                border: 1px solid #9e9e9e;
+                padding: 12px 14px;
+                vertical-align: top;
+            }
+            .schedule-table thead th {
+                background: #8f8f8f;   /* 헤더 회색 */
+                color: #fff;
+                font-weight: 600;
+                text-align: center;
+            }
+            .schedule-table tbody th {
+                text-align: center;
+                font-weight: 600;
+                background: #fafafa;    /* 구분 열 살짝 연함(선택) */
+            }
+            /* 내용 칼럼: 불릿 */
+            .schedule-table ul {
+                margin: 0;
+                padding-left: 1.2em;
+            }
+            .schedule-table li { margin: .25em 0; }
+            /* 칼럼 너비(이미지 비율 감안) */
+            .schedule-table col:nth-child(1){ width: 20%; }
+            .schedule-table col:nth-child(2){ width: 22%; }
+            .schedule-table col:nth-child(3){ width: 58%; }
+
+            /* 작은 화면 보조 */
+            @media (max-width: 640px){
+                .schedule-table { font-size: 14px; }
+            }
+
+            /* 표 하단 주석 */
+            .table-note{
+                margin-top: 6px;
+                font-size: 14px;
+                color: #666;
+            }
   		</style>
 	</head>
 	<body class="no-sidebar is-preload">
@@ -25,7 +71,7 @@
 					<div class="container">
 
 						<!-- Logo -->
-							<h1 id="logo"><a href="index.html">프로그램 소개</a></h1>
+							<h1 id="logo"><a href="index.html">일정안내</a></h1>
 							<h2><br />B.SORI는 여러분들과 함께합니다. <br />아래 내용을 반드시 숙지해주세요.</h2>
 
 						<!-- Nav -->
@@ -58,21 +104,129 @@
 									<header>
 										<h2><strong>프로그램 주요 참여대학 및 인원</strong></h2>
 									</header>
-									<h3>부산권역 10개 대학 (동아대학교, 동명대학교, 부산과학기술대학교, 동서대학교, 부산보건대학교, 국립한국해양대학교, 동의대학교, 부산가톨릭대학교, 고신대학교, 영산대학교)이 참여합니다.</h3>
-									<h3>참여후보대학과 대표대학은 공유·협업을 활발하게 하고 있는 대학/전문대학을 기준으로 우선적으로 선정합니다. </h3>
-                                    <h3>대학, 전문대학간 학교간, 학생간 교류 활성화를 위해, 팀 구성 시 구분 없이 통합하여 운영합니다.</h3>
-                                    <h3>권역 별 참여대학의 수가 상이할 경우, 논의를 통해 권역별로 통합하여 진행할 수 있으며, 이 경우 챔피언십 등은 이후 조정하여 운영됩니다.</h3>
-                                </article>
-                                <article class="box post">
-                                    <header>
-										<h2><strong>운영방식</strong></h2>
-									</header>
-									<h3>온·오프라인 하이브리드 교육 : 지자체가 고민하고 있는 다양한 문제들을 정의하고, 해결방안을 도출할 수 있는 강의 및 실습을 진행합니다.</h3>
-									<h3>특강 : 지자체 현직자 및 문제해결 전문가를 초빙하여 문제해결에 참고할 수 있는 다양한 아이디어 제공합니다.</h3>
-                                    <h3>멘토링(온라인) : 문제해결 과정에서 개선이 필요한 점에 대한 피드백을 제공하고, 실현 가능성을 점검할 수 있도록 진행합니다.</h3>
-                                    <h3>경진대회 : 학생들의 결과물을 공유하고, 우수팀을 선정하는 대회를 운영합니다. </h3>
-								</article>
+                                    <table class="schedule-table">
+                                    <colgroup>
+                                        <col><col><col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                        <th>구분</th>
+                                        <th>일자</th>
+                                        <th>내용</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <th scope="row">주제 취합</th>
+                                        <td style="text-align:center;">8.29(금)까지</td>
+                                        <td>
+                                            <ul>
+                                            <li>부산시, 기초지자체, 부산시 기업에 직접 주제를 발굴</li>
+                                            <li>주제 카테고리 정리</li>
+                                            </ul>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">홍보 및 모집</th>
+                                        <td style="text-align:center;">8.25(수)~9.2(화)</td>
+                                        <td>
+                                            <ul>
+                                            <li>오프라인 포스터</li>
+                                            <li>온라인 채널 홍보자료 제작, 타겟광고</li>
+                                            </ul>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">최종 모집 완료<br>및 명단 확정</th>
+                                        <td style="text-align:center;">9.3(수)</td>
+                                        <td>
+                                            <ul>
+                                            <li>학교 별 10명 (팀원 2명을 구성하여 신청)</li>
+                                            </ul>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">오리엔테이션</th>
+                                        <td style="text-align:center;">9.6(토)</td>
+                                        <td>
+                                            <ul>
+                                            <li>온라인 진행</li>
+                                            <li>프로그램 안내, 운영방식 소개</li>
+                                            </ul>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">1차 교육</th>
+                                        <td style="text-align:center;">9.12(금)</td>
+                                        <td>
+                                            <ul>
+                                            <li>오프라인 교육 (부산 코모도 호텔)</li>
+                                            <li>주제선정, 팀빌딩</li>
+                                            </ul>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">2차 교육</th>
+                                        <td style="text-align:center;">9.20(토)</td>
+                                        <td>
+                                            <ul>
+                                            <li>온라인 진행</li>
+                                            <li>Design Thinking 기반 문제해결</li>
+                                            </ul>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">1차 멘토링</th>
+                                        <td style="text-align:center;">9.29(월)~10.02(목)</td>
+                                        <td>
+                                            <ul>
+                                            <li>현장 멘토링 (팀별 1시간)</li>
+                                            </ul>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">결과물 제출</th>
+                                        <td style="text-align:center;">10.10(금)</td>
+                                        <td>
+                                            <ul>
+                                            <li>PPT, 홍보 동영상</li>
+                                            </ul>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">예선 발표</th>
+                                        <td style="text-align:center;">10.13(월)</td>
+                                        <td>
+                                            <ul>
+                                            <li>제출된 결과물로 온라인 진행</li>
+                                            </ul>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">2차 멘토링</th>
+                                        <td style="text-align:center;">10.27(월)~10.31(금)</td>
+                                        <td>
+                                            <ul>
+                                            <li>전문가 멘토링 (팀별 1시간)</li>
+                                            <li>팀 요구사항 도출을 바탕으로 매칭</li>
+                                            </ul>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">최종 발표</th>
+                                        <td style="text-align:center;">11.7(금)</td>
+                                        <td>
+                                            <ul>
+                                            <li>예선통과팀 오프라인 진행</li>
+                                            <li>벡스코 및 부산 코모도 호텔 (협의 필요)</li>
+                                            </ul>
+                                        </td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
 
+                                    <div class="table-note">※ 상황에 따라 일정이 변동될 수 있습니다.</div>
+                                </article>
 						</div>
 					</div>
 				</section>
